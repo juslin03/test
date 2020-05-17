@@ -1,0 +1,69 @@
+{
+  "name": "webpack-test",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "absoluteRuntime": false,
+          "corejs": false,
+          "helpers": true,
+          "regenerator": true
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "@babel/cli": "7.8.4",
+    "@babel/core": "7.9.6",
+    "@babel/preset-env": "7.9.6",
+    "@hapi/joi": "17.1.1",
+    "babel-loader": "8.1.0",
+    "bcrypt": "4.0.1",
+    "bcryptjs": "2.4.3",
+    "body-parser": "1.19.0",
+    "compression": "1.7.4",
+    "cookie-parser": "1.4.5",
+    "cross-env": "7.0.2",
+    "debug": "4.1.1",
+    "express": "4.17.1",
+    "express-validation": "3.0.2",
+    "helmet": "3.22.0",
+    "mongoose": "5.9.14",
+    "morgan": "1.10.0",
+    "validator": "13.0.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "7.9.6",
+    "@babel/plugin-transform-runtime": "7.9.6",
+    "eslint": "7.0.0",
+    "eslint-config-equimper": "2.2.2",
+    "nodemon": "2.0.4",
+    "rimraf": "3.0.2",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.11",
+    "webpack-node-externals": "1.7.2"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev:build": "yarn run clean && webpack -w",
+    "dev": "cross-env NODE_ENV=development nodemon dist/index.bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juslin03/webpack-test.git"
+  },
+  "author": "Mister Juslin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juslin03/webpack-test/issues"
+  },
+  "homepage": "https://github.com/juslin03/webpack-test#readme"
+}
