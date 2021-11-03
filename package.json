@@ -37,7 +37,7 @@
     "helmet": "3.22.0",
     "mongoose": "5.9.14",
     "morgan": "1.10.0",
-    "validator": "13.0.0"
+    "validator": "13.7.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-object-rest-spread": "7.9.6",
